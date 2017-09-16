@@ -1,414 +1,411 @@
 body {
-  background: $white ;
+  background: $white;
   color: $color-text;
   font-family: $font-family-base;
-  line-height: $line-height-base;
   font-size: $font-size-base;
-  position: relative;
   -webkit-font-smoothing: antialiased;
+  line-height: $line-height-base;
+  position: relative;
 
-  .wrapper{
-    z-index: 2;
-    visibility: hidden;
+  .wrapper {
     @include opacity(0);
     position: relative;
+    visibility: hidden;
+    z-index: 2;
+
   }
 }
 
-.bg1{
-  background-image: url(../images/bg1.jpg);
+.bg1 {
+  background-image: url('../images/bg1.jpg');
 }
 
-.bg2{
-  background-image: url(../images/bg2.jpg);
+.bg2 {
+  background-image: url('../images/bg2.jpg');
 }
 
-.container-medium{
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+.container-medium {
   margin-left: auto;
+  margin-right: auto;
   max-width: 960px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   z-index: 1;
 }
 
-.container-mini{
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+.container-mini {
   margin-left: auto;
+  margin-right: auto;
   max-width: 840px;
-  position: relative;
-  z-index: 1;
-}
-
-.container-xs{
-  padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 625px;
+  padding-right: 15px;
   position: relative;
   z-index: 1;
 }
 
-.content-table{
+.container-xs {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 625px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.content-table {
   display: table;
   position: relative;
   width: 100%;
-  .v-content{
-    position: relative;
+
+  .v-content {
     display: table-cell;
-    vertical-align: middle;
-    margin-top: 0;
-    text-align: center;
-    margin-bottom: 0;
     float: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
   }
 }
 
-.no-margin-top{
+.no-margin-top {
   margin-top: 0;
 }
-.no-margin-bottom{
+
+.no-margin-bottom {
   margin-bottom: 0;
 }
 
-.no-margin{
+.no-margin {
   margin: 0;
 }
 
-.no-padding{
+.no-padding {
   padding: 0;
 }
-.margin-right-5{
+
+.margin-right-5 {
   margin-right: 5px;
 }
-.fix-width-100{
-  width: 100px;
-  display: inline-block;
-}
-.paddingTB-30{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-.padding20{
+.fix-width-100 {
+  display: inline-block;
+  width: 100px;
+ }
+
+.padding20 {
   padding: 20px;
 }
 
-.padding30{
+.padding30 {
   padding: 30px;
 }
 
-
-.white-space-10{
+.white-space-10 {
   height: 10px;
 }
 
-.white-space-20{
+.white-space-20 {
   height: 20px;
 }
 
-.white-space-30{
+.white-space-30 {
   height: 30px;
 }
 
-.white-space-40{
+.white-space-40 {
   height: 40px;
 }
 
-.white-space-50{
+.white-space-50 {
   height: 50px;
 }
-.white-space-60{
+
+.white-space-60 {
   height: 60px;
 }
 
-.space-inline-15{
+.space-inline-15 {
   display: inline-block;
   width: 15px;
 }
 
-.space-inline-30{
+.space-inline-30 {
   display: inline-block;
   width: 30px;
 }
 
-.color-dark{
+.color-dark {
   color: $black;
 }
 
-.color-primary{
+.color-primary {
   color: $color-primary;
 }
 
-.color-light{
-  color: $white - 20;
+.color-light {
+  color: $gray-light;
 }
 
-.bg-primary{
+.bg-primary {
   background-color: $color-primary;
 }
 
-.bg-secondary{
-  background-color: $white - 10;
-}
-.bg-dark{
-  background-color: $black + 50;
+.bg-secondary {
+  background-color: $gray-lighter;
 }
 
-.big-icon{
-  font-size: 4em;
-  display: block;
-  margin-bottom: 20px;
-  text-align: center;
-  background: $white;
-  @include box_shadow(0 0 6px rgba(0,0,0,0.1));
-  padding: 30px 0;
-  margin-top: 10px;
+.bg-dark {
+  background-color: $almost-black;
+}
+
+.big-icon {
+  @include box-shadow(0 0 6px rgba($white, .1));
   @include radius(4px);
-  color: $black + 40;
-  border: 4px double $white - 20;
+  background: $white;
+  border: 4px double $gray-light;
+  color: $gray-darkest;
+  display: block;
+  font-size: 4em;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 30px 0;
+  text-align: center;
 }
 
-
-.img-bordered{
-  max-width: 100%;
-  border: 4px double $white - 20;
+.img-bordered {
   @include radius(10px);
+  border: 4px double $gray-light;
   margin-bottom: 30px;
+  max-width: 100%;
 }
 
-blockquote{
-  margin-bottom: 30px;
+blockquote {
   font-size: 14px;
+  margin-bottom: 30px;
 }
 
-.list-with-icon{
-  li{
+.list-with-icon {
+  li {
     padding-left: 30px;
     position: relative;
-    .ic-list{
+
+    .ic-list {
+      left: 0;
       position: absolute;
       top: 7px;
-      left: 0;
     }
   }
 }
 
-.box-line{ 
+.box-line {
+  background: rgba($white, .3);
   border: 3px solid $black;
   color: $black;
-  background: $white;
-  background: rgba($white, 0.30);
+  display: inline-block;
   letter-spacing: 2px;
   padding: 10px 30px;
-  display: inline-block;
 }
 
-.display-block{
+.display-block {
   display: block;
 }
 
-.display-inline-block{
+.display-inline-block {
   display: inline-block;
 }
 
-.text-bold{
+.text-bold {
   font-weight: 700;
 }
 
-.text-extra-bold{
+.text-extra-bold {
   font-weight: 800;
 }
 
-.text-light{
+.text-light {
   font-weight: 300;
 }
 
-.font-alt{
-  font-family: Georgia;
+.br-right {
+  border-right: 1px solid $gray-light;
 }
 
-.br-right{
-  border-right: 1px solid $white - 20 !important;
+.br-left {
+  border-left: 1px solid $gray-light;
 }
 
-.br-left{
-  border-left: 1px solid $white - 20 !important;
+.br-top {
+  border-top: 1px solid $gray-light;
 }
 
-.br-top{
-  border-top: 1px solid $white - 20 !important;
+.br-bottom {
+  border-bottom: 1px solid $gray-light;
 }
 
-.br-bottom{
-  border-bottom: 1px solid $white - 20 !important;
-}
-
-.line-dash-bottom{
-  border-bottom: 1px dashed #ebebeb;
+.line-dash-bottom {
+  border-bottom: 1px dashed $gray-light;
   padding-bottom: 12px;
 }
 
-.padding-left-30{
+.padding-left-30 {
   padding-left: 30px;
 }
 
-.relative{
+.relative {
   position: relative;
   z-index: 1;
 }
 
-
-.white-light{
+.white-light {
   position: relative;
-  &:before{
-    content: "";
-    position: absolute;
-    width: 50%;
-    $a: top 1s ease 0.3s, background 1s ease 0s;
-    @include transition( $a);
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: rbga($white, 0.3);
-  }
-  &:after{
-    content: "";
-    position: absolute;
-    width: 50%;
-    $a: bottom 1s ease 0.3s, background 1s ease 0s;
+
+  &::before {
+    $a: top 1s ease .3s, background 1s ease 0s;
     @include transition($a);
-    right: 0;
-    bottom: 0;
+    background: rgba($white, .3);
+    content: '';
     height: 100%;
-    background: rgba($white, 0.2);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+  }
+
+  &::after {
+    $a: bottom 1s ease .3s, background 1s ease 0s;
+    @include transition($a);
+    background: rgba($white, .2);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 50%;
   }
 }
 
-.block-page{
+.block-page {
   padding: 60px 0;
 }
 
-.black-light{
+.black-light {
   position: relative;
-  &:before{
-    content: "";
-    position: absolute;
-    width: 50%;
-    $a: top 1s ease 0.3s, background 1s ease 0s;
-    @include transition( $a);
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: rgba($black, 0.5);
-  }
-  &:after{
-    content: "";
-    position: absolute;
-    width: 50%;
-    $a: bottom 1s ease 0.3s, background 1s ease 0s;
+
+  &::before {
+    $a: top 1s ease .3s, background 1s ease 0s;
     @include transition($a);
-    right: 0;
-    bottom: 0;
+    background: rgba($black, .5);
+    content: '';
     height: 100%;
-    background: rgba($black, 0.6);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+  }
+
+  &::after {
+    $a: bottom 1s ease .3s, background 1s ease 0s;
+    @include transition($a);
+    background: rgba($black, .6);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 50%;
   }
 }
 
-.block-section{
+.block-section {
   background: $white;
   position: relative;
   z-index: 1;
 }
 
-.block-title{
+.block-title {
+  border-bottom: 1px solid $gray-light;
+  border-top: 1px solid $gray-light;
   padding: 40px 0;
-  z-index: 3;
   position: relative;
-  border-top: 1px solid $white - 20;
-  border-bottom: 1px solid $white - 20;
   text-align: center;
-  .title-icon{
+  z-index: 3;
+
+  .title-icon {
     display: inline-block;
     position: relative;
-    &:before{
-      content: "";
-      position: absolute;
+
+    &::before {
+      background: $almost-black;
+      content: '';
       height: 1px;
-      background: $black + 50;
-      width: 20px;
       left: -30px;
-      top: 50%;
-    }
-    &:after{
-      content: "";
       position: absolute;
-      height: 1px;
-      background: $black + 50;
+      top: 50%;
       width: 20px;
+    }
+
+    &::after {
+      background: $almost-black;
+      content: '';
+      height: 1px;
+      position: absolute;
       right: -30px;
       top: 50%;
+      width: 20px;
     }
   }
-  &:before{
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background: $white - 10;
+
+  &::before {
+    background: $gray-lighter;
     bottom: -1px;
+    content: '';
+    height: 2px;
     left: 50%;
     margin-left: -12px;
+    position: absolute;
+    width: 24px;
   }
 }
 
-.shape-bottom{
-  z-index: 2;
+.shape-bottom {
   position: relative;
-  &:before{
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: $white - 10;
-    border: 1px solid $white - 20;
-    z-index: 1;
+  z-index: 2;
+
+  &::before {
+    @include transform(rotate(45deg));
+    background: $gray-lighter;
+    border: 1px solid $gray-light;
     bottom: -10px;
+    content: '';
+    height: 20px;
     left: 50%;
     margin-left: -10px;
-    @include transform(rotate(45deg));
-
+    position: absolute;
+    width: 20px;
+    z-index: 1;
   }
 }
 
+.progress-wrap {
+  margin-bottom: 10px;
+  margin-top: 10px;
 
-.error{
-  color: #BD2929;
-  font-weight: 400;
-  letter-spacing: 2px;
-  @include transition;
-}
-
-
-.progress-wrap{
-  margin-top:10px;
-  margin-bottom:10px;
-  .progress{
+  .progress {
     @include radius;
     height: 10px;
   }
-  .bar{
+
+  .bar {
     background: $black;
-    min-height: 3px;
     margin: 3px 0;
+    min-height: 3px;
   }
 }
 
-.attbox{
-  padding-top:0;
-  padding-bottom:10px;
+.attbox {
+  padding-bottom: 10px;
+  padding-top: 0;
 }

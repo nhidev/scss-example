@@ -1,55 +1,58 @@
-.my-profile{
-  position:relative;
-  .my-pict{
-    background-repeat:  no-repeat;
+.my-profile {
+  position: relative;
+
+  .my-pict {
+    background-image: url('../images/my-pict.jpg');
     background-position: center;
-    background-image: url(../images/my-pict.jpg);
-    position: absolute;
-    left: 0;
-    top: 0;
+    background-repeat: no-repeat;
     height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
 
     @media (max-width: $res-mobile) {
-      position: relative;
       height: 300px;
+      position: relative;
     }
 
-    .overfly{
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      @include transition(all 0.8s ease 0s);
-      overflow: hidden;
+    .overfly {
+      @include transition(all .8s ease 0s);
       height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
 
-      .text-botttom{
-        position: absolute;
-        width: 100%;
-        @include transition(all 0.8s ease 0s);
+      .text-botttom {
+        @include transition(all .8s ease 0s);
         bottom: 0;
-        right: 0;
         padding: 40px;
+        position: absolute;
+        right: 0;
         text-align: right;
+        width: 100%;
       }
     }
   }
 
-  .my-desc, .my-pict{
+  .my-desc,
+  .my-pict {
     width: 50%;
-    @media (max-width: $res_mobile) {
-      width: 100% !important;
+
+    @media(max-width: $res-mobile) {
+      width: 100%;
     }
   }
 
-  .my-desc{
+  .my-desc {
     float: right;
 
-    .inner-text{
+    .inner-text {
       max-width: 585px;
       padding: 40px;
 
-      @media (max-width: $res_mobile) {
+      @media (max-width: $res-mobile) {
         max-width: 100%;
       }
     }

@@ -1,117 +1,127 @@
-.main-header{
+.main-header {
   height: 600px;
   position: relative;
 
-  .header-content-fixed{
-    height: 600px;
-    background: url(../images/main-header.jpg) no-repeat center;
-    background-size: cover;
+  .header-content-fixed {
+    background: url('../images/main-header.jpg') no-repeat center;
     background-attachment: fixed;
-    text-align: center;
+    background-size: cover;
+    height: 600px;
     position: fixed;
-    z-index: 0;
+    text-align: center;
     width: 100%;
-    &:before{
-      content: "";
-      position: absolute;
-      width: 50%;
-      $a: top 1s ease 0.3s, background 1s ease 0s;
-      @include transition( $a);
-      left: 0;
-      top: 0;
-      height: 100%;
-      background: rgba($white, 0.4);
-    }
-    &:after{
-      content: "";
-      position: absolute;
-      width: 50%;
-      $a: bottom 1s ease 0.3s, background 1s ease 0s;
+    z-index: 0;
+
+    &::before {
+      $a: top 1s ease .3s, background 1s ease 0s;
       @include transition($a);
-      right: 0;
-      bottom: 0;
+      background: rgba($white, .4);
+      content: '';
       height: 100%;
-      background: rgba($white, 0.3);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 50%;
     }
+
+    &::after {
+      $a: bottom 1s ease .3s, background 1s ease 0s;
+      @include transition($a);
+      background: rgba($white, .3);
+      bottom: 0;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: 0;
+      width: 50%;
+      }
 
     @media (max-width: $res-tab) {
       position: relative;
     }
-
   }
 
-  &:hover{
-    .header-content-fixed{
-      &:before{
-        background: rgba($white, 0.9);
+  &:hover {
+    .header-content-fixed {
+
+      &::before {
+        background: rgba($white, .9);
       }
-      &:after{
-        background: rgba($white, 0.8);
+
+      &::after {
+        background: rgba($white, .8);
       }
     }
   }
 
-  .whoim{
+  .whoim {
     position: absolute;
+    top: 100px;
     width: 100%;
     z-index: 3;
-    top: 100px;
   }
-  .name{
+
+  .name {
     font-size: 60px;
-    margin-bottom: 20px;
     font-weight: 700;
+    letter-spacing: 10px;
+
+    margin-bottom: 20px;
     position: relative;
     z-index: 3;
-    letter-spacing: 10px;
+
     @media (max-width: $nav-res) {
       font-size: 3em;
     }
   }
 
-  .job{
-    position: relative;
-    display: inline-block;
-    z-index: 3;
+  .job {
     border-bottom: 1px solid $black;
-    padding: 10px;
+    display: inline-block;
     letter-spacing: 4px;
-  }
+    padding: 10px;
+    position: relative;
+    z-index: 3;
 
+  }
 }
 
-.menu-area{
-  position: absolute;
-  @include transition(background 0.8s ease 0s);
+.menu-area {
+  @include transition(background .8s ease 0s);
+  background: rgba($white, .3);
+  border-bottom: 1px solid $gray-light;
   bottom: 0;
-  padding: 10px 0;
-  background: $white;
-  background: rgba($white, 0.3);
   left: 0;
-  border-bottom: 1px solid $white - 20;
+  padding: 10px 0;
+  position: absolute;
   text-align: center;
   width: 100%;
   z-index: 100;
 
-  .toogle-bars{
+  .toogle-bars {
     display: none;
-    a{
-      text-decoration: none;
+
+    a {
       color: $black;
-      .ic-open{
+      text-decoration: none;
+
+      .ic-open {
         display: none;
         visibility: hidden;
       }
-      .ic-close{
+
+      .ic-close {
         display: inline;
         visibility: visible;
       }
-      &.collapsed{
-        .ic-open{
+
+      &.collapsed {
+        .ic-open {
           display: inline;
           visibility: visible;
         }
-        .ic-close{
+
+        .ic-close {
           display: none;
           visibility: hidden;
         }
@@ -119,115 +129,124 @@
     }
   }
 
-  .main-nav{
-    visibility: visible !important;
-    margin: 0;
+  .main-nav {
     background: transparent;
-    &>li{
+    margin: 0;
+    visibility: visible;
+
+    >li {
       display: inline;
-      &>a{
-        font-weight: 700;
-        color: $black + 50;
-        outline: none;
-        font-size: 12px;
+
+      >a {
         @include transition;
+        color: $almost-black;
+        font-size: 12px;
+        font-weight: 700;
+        outline: none;
         text-decoration: none;
         text-transform: uppercase;
-        &:hover{
+
+        &:hover {
           color: $black;
           outline: none;
         }
       }
 
-      &+li:before {
-        color: $black + 50;
+      +li::before {
+        color: $almost-black;
       }
 
-      &.active{
-        &>a{
+      &.active {
+        >a {
           color: $black;
         }
       }
     }
 
-    &.nav{
-      &>li{
-        &>a{
-          padding: 0;
+    &.nav {
+      >li {
+        >a {
           display: inline-block;
-          &:hover, &:focus{
+          padding: 0;
+
+          &:hover,
+          &:focus {
             background: transparent;
           }
         }
       }
     }
 
-    &.no-space{
-      &>li{
-        &+li:before {
-          content: "";
+    &.no-space {
+      >li {
+        +li::before {
+          content: '';
         }
       }
     }
   }
 
-  @mixin nav-white(){
-    border-bottom: 1px solid $white - 20;
+  @mixin nav-white() {
+    border-bottom: 1px solid $gray-light;
     background: $white;
-    .main-nav{
-      &>li{
-        &>a{
+
+    .main-nav {
+      >li {
+        >a {
           color: $color-text;
-          &:hover{
-            color: $black;
-          }
-        }
-        &.active{
-          &>a{
+
+          &:hover {
             color: $black;
           }
         }
 
-        &+li:before {
-          color: $white - 20;
+        &.active {
+          >a {
+            color: $black;
+          }
+        }
+
+        +li::before {
+          color: $gray-light;
         }
       }
     }
   }
-  &.nav-white-bg{
+
+  &.nav-white-bg {
     @include nav-white;
   }
 
 
-  &.nav-fixed{
+  &.nav-fixed {
+    background: $white;
+    border-bottom: 1px solid $gray-light;
+    bottom: inherit;
     position: fixed;
     top: 0;
-    background: $white;
     z-index: 100;
-    bottom: inherit;
-    border-bottom: 1px solid $white - 20;
   }
 
-  @media (min-width: $nav_res) {
-    .menu-collapse.collapse{
+  @media (min-width: $nav-res) {
+    .menu-collapse.collapse {
       display: block;
-      height: auto !important;
+      height: auto;
     }
   }
 
-  @media (max-width: $nav_res) {
+  @media (max-width: $nav-res) {
     @include nav-white;
-    .toogle-bars{
+    .toogle-bars {
       display: block;
     }
-    .menu-collapse{
 
-      &.collapse.in{
-        border-top: 1px solid $white - 20;
-        margin-top: 10px;
+    .menu-collapsec {
+
+      &.collapse.inc {
+        border-top: 1px solid $gray-light;
         display: block;
+        margin-top: 10px;
       }
     }
   }
-
 }

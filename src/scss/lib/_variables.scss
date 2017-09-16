@@ -1,12 +1,22 @@
-$black :            #000000 !default;
-$white :            #ffffff !default;
-$color-text:        #7d7d7d !default;
-$color-primary :    #e74c3c !default;
+$white:                #fff !default;
+$almost-white:         #f6f6f6 !default;
+$gray-lighter:         #f5f5f5 !default;
+$gray-light:           #ebebeb !default;
+$gray:                 #eee    !default;
 
-$res-tab : 1024px;
-$res-mobile : 880px;
-$res-mini-mobile : 768px;
-$nav-res : 1030px;
+$black:                #000 !default;
+$almost-black:         #323232 !default;
+$gray-darkest:         #282828 !default;
+$gray-darker:          #505050 !default;
+
+
+$color-text:        #7d7d7d !default;
+$color-primary:    #e74c3c !default;
+
+$res-tab: 1024px;
+$res-mobile: 880px;
+$res-mini-mobile: 768px;
+$nav-res: 1030px;
 
 
 $font-family-serif:        "Montserrat", sans-serif !default;
@@ -29,13 +39,13 @@ $font-size-h6:             14px !default;
 
 
 $line-height-wide:         2.4 !default;
-$line-height-base:         2.0 !default;
+$line-height-base:         2 !default;
 $line-height-narrow:       1.7 !default;
 $line-height-narrower:     1.4 !default;
 
-$letter-spacing-wide:      0.12em !default;
-$letter-spacing-base:      0.05em !default;
-$letter-spacing-base-sm:   0.10em !default;
+$letter-spacing-wide:      .12em !default;
+$letter-spacing-base:      .05em !default;
+$letter-spacing-base-sm:   .10em !default;
 
 $headings-font-family:     inherit !default;
 $headings-font-weight:     500 !default;
