@@ -1,0 +1,47 @@
+$black :            #000000 !default;
+$white :            #ffffff !default;
+$color-text:        #7d7d7d !default;
+$color-primary :    #e74c3c !default;
+
+$res-tab : 1024px;
+$res-mobile : 880px;
+$res-mini-mobile : 768px;
+$nav-res : 1030px;
+
+
+$font-family-serif:        "Montserrat", sans-serif !default;
+$font-family-base:         $font-family-serif !default;
+
+$font-size-base:           14px !default;
+$font-size-large:          16px !default;
+$font-size-small:          12px !default;
+$font-size-xsmall:         10px !default;
+
+$font-size-h1:             36px !default;
+$font-size-h1-sm:          28px !default;
+$font-size-h2:             24px !default;
+$font-size-h2-sm:          22px !default;
+$font-size-h3:             18px !default;
+$font-size-h3-sm:          16px !default;
+$font-size-h4:             14px !default;
+$font-size-h5:             14px !default;
+$font-size-h6:             14px !default;
+
+
+$line-height-wide:         2.4 !default;
+$line-height-base:         2.0 !default;
+$line-height-narrow:       1.7 !default;
+$line-height-narrower:     1.4 !default;
+
+$letter-spacing-wide:      0.12em !default;
+$letter-spacing-base:      0.05em !default;
+$letter-spacing-base-sm:   0.10em !default;
+
+$headings-font-family:     inherit !default;
+$headings-font-weight:     500 !default;
+$headings-line-height:     1.1 !default;
+$headings-color:           inherit !default;
+
+
+$border-radius-base:    4px;
+$border-radius-small:   2px;

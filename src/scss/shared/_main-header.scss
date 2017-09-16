@@ -1,0 +1,233 @@
+.main-header{
+  height: 600px;
+  position: relative;
+
+  .header-content-fixed{
+    height: 600px;
+    background: url(../images/main-header.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 50%;
+      $a: top 1s ease 0.3s, background 1s ease 0s;
+      @include transition( $a);
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: rgba($white, 0.4);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 50%;
+      $a: bottom 1s ease 0.3s, background 1s ease 0s;
+      @include transition($a);
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background: rgba($white, 0.3);
+    }
+
+    @media (max-width: $res-tab) {
+      position: relative;
+    }
+
+  }
+
+  &:hover{
+    .header-content-fixed{
+      &:before{
+        background: rgba($white, 0.9);
+      }
+      &:after{
+        background: rgba($white, 0.8);
+      }
+    }
+  }
+
+  .whoim{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    top: 100px;
+  }
+  .name{
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    z-index: 3;
+    letter-spacing: 10px;
+    @media (max-width: $nav-res) {
+      font-size: 3em;
+    }
+  }
+
+  .job{
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    border-bottom: 1px solid $black;
+    padding: 10px;
+    letter-spacing: 4px;
+  }
+
+}
+
+.menu-area{
+  position: absolute;
+  @include transition(background 0.8s ease 0s);
+  bottom: 0;
+  padding: 10px 0;
+  background: $white;
+  background: rgba($white, 0.3);
+  left: 0;
+  border-bottom: 1px solid $white - 20;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+
+  .toogle-bars{
+    display: none;
+    a{
+      text-decoration: none;
+      color: $black;
+      .ic-open{
+        display: none;
+        visibility: hidden;
+      }
+      .ic-close{
+        display: inline;
+        visibility: visible;
+      }
+      &.collapsed{
+        .ic-open{
+          display: inline;
+          visibility: visible;
+        }
+        .ic-close{
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  .main-nav{
+    visibility: visible !important;
+    margin: 0;
+    background: transparent;
+    &>li{
+      display: inline;
+      &>a{
+        font-weight: 700;
+        color: $black + 50;
+        outline: none;
+        font-size: 12px;
+        @include transition;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover{
+          color: $black;
+          outline: none;
+        }
+      }
+
+      &+li:before {
+        color: $black + 50;
+      }
+
+      &.active{
+        &>a{
+          color: $black;
+        }
+      }
+    }
+
+    &.nav{
+      &>li{
+        &>a{
+          padding: 0;
+          display: inline-block;
+          &:hover, &:focus{
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    &.no-space{
+      &>li{
+        &+li:before {
+          content: "";
+        }
+      }
+    }
+  }
+
+  @mixin nav-white(){
+    border-bottom: 1px solid $white - 20;
+    background: $white;
+    .main-nav{
+      &>li{
+        &>a{
+          color: $color-text;
+          &:hover{
+            color: $black;
+          }
+        }
+        &.active{
+          &>a{
+            color: $black;
+          }
+        }
+
+        &+li:before {
+          color: $white - 20;
+        }
+      }
+    }
+  }
+  &.nav-white-bg{
+    @include nav-white;
+  }
+
+
+  &.nav-fixed{
+    position: fixed;
+    top: 0;
+    background: $white;
+    z-index: 100;
+    bottom: inherit;
+    border-bottom: 1px solid $white - 20;
+  }
+
+  @media (min-width: $nav_res) {
+    .menu-collapse.collapse{
+      display: block;
+      height: auto !important;
+    }
+  }
+
+  @media (max-width: $nav_res) {
+    @include nav-white;
+    .toogle-bars{
+      display: block;
+    }
+    .menu-collapse{
+
+      &.collapse.in{
+        border-top: 1px solid $white - 20;
+        margin-top: 10px;
+        display: block;
+      }
+    }
+  }
+
+}

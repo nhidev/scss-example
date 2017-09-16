@@ -1,1 +1,11 @@
 @charset 'UTF-8';
+//library
+@import 'lib/variables';
+@import 'lib/mixins';
+
+@import 'shared/helper.scss';
+@import 'shared/main-header.scss';
+@import 'shared/main-footer.scss';
+@import 'blocks/about.scss';
+
+
