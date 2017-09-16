@@ -1,0 +1,14 @@
+## Editor generated files ##
+.*.sw[p|o|n]
+*.sw[p|o|n]
+*.un~
+*\#*
+*~
+\#*\#
+/tags
+.idea
+
+## Frontend
+/node_modules
+/.sass-cache
+/npm-debug.log
