@@ -6,33 +6,118 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
-    <title>Html Starter</title>
+    <title>Scss Example</title>
     <meta name="description" content="">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/css/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <header>
-  <div class="container">
-    <h1 class="text-center">Header</h1>
-  </div>
-</header>
-    
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9"><h2>Main</h2></div>
-      <div class="col-md-3"><h2>Sidebar</h2></div>
+    <header class="main-header" id="home">
+  <div class="content-table header-content-fixed ">
+    <div class="v-content">
+      <div class="container">
+        <h1 class="text-uppercase color-dark name">i’m Nhi Thai</h1>
+        <h4 class="text-uppercase color-dark font-alt job"><span id="typed" class="typed">Frontend Developer</span><span class="typed-cursor">.</span></h4>
+      </div>
     </div>
   </div>
-</section>
-    <footer>
+  <!-- Main navbar -->
+  <div class="menu-area">
+    <div class="toogle-bars">
+      <a href="#menu-collapse" data-toggle="collapse" class="collapsed"><i class="fa fa-bars ic-open"></i> <i class="fa fa-remove ic-close"></i> MENU</a>
+    </div>
+    <div class="menu-collapse collapse" id="menu-collapse">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="breadcrumb main-nav no-space">
+              <li class="link-inpage"><a href="#contact" id="hireme-tab" class="link-inpage"><i class="fa fa-briefcase"></i> Hire Me Now</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="breadcrumb main-nav nav">
+              <li class="active"><a href="#home" class="link-inpage">Home</a></li>
+              <li ><a href="#about" class="link-inpage">About</a></li>
+              <li ><a href="#resume" class="link-inpage">Resume</a></li>
+              <li ><a href="#portfolio" class="link-inpage">Portfolio</a></li>
+              <li ><a href="#contact" id="contact-tab" class="link-inpage">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="breadcrumb main-nav no-space">
+              <li>
+                <a href="https://www.facebook.com/nhithai1905" ><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/nhi-thai-b69b7535/" ><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/nhidev" ><i class="fa fa-github"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Main navbar -->
+</header>    
+<!-- ABOUT ME -->
+<section id="about" class="block-section">
+  <div class="clearfix my-profile">
+    <div class="my-pict" >
+      <div class="overfly">
+        <div class="text-botttom">
+          <h2 class="text-uppercase color-dark text-bold">nhi Thai</h2>
+          <h5 class="text-uppercase color-dark font-alt ">Life is an adventure. Take risks</h5>
+        </div>
+      </div>
+    </div>
+    <div class="my-desc">
+      <div class="bg-secondary clearfix">
+        <div class="inner-text">
+          <p >My name is Nhi, I am an aspiring web developer. I love developing clean and elegant dynamic websites and web applications. I've learned languages such as HTML, CSS, JavaScript, PHP and continually learn much more.</p>
+          <p class="no-margin">I have worked with popular frameworks such as Bootstrap and libraries such as jQuery. Check out my portfolio and if you're interested, check out my contact area and shoot me an email.</p>
+        </div>
+      </div>
+      <div class="bg-dark clearfix">
+        <div class="inner-text">
+          <p class="no-margin color-light ">
+            <strong class="fix-width-100"><i class="fa fa-calendar margin-right-5"></i> Birthdate</strong> : 19/05/1988<br/>
+            <strong class="fix-width-100"><i class="fa fa-phone margin-right-5"></i> Phone</strong> : 0974 833 783<br/>
+            <strong class="fix-width-100"><i class="fa fa-envelope margin-right-5"></i> Email</strong> : nhithai88@gmail.com<br/>
+            <strong class="fix-width-100"><i class="fa fa-globe margin-right-5"></i> Website</strong> :www.amyb.xyz <br/>
+            <strong class="fix-width-100"><i class="fa fa-location-arrow margin-right-5"></i> Adresse</strong> : 32 To Ky Street, Trung My Tay Ward, District 12.<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- END ABOUT ME -->
+
+    <footer class="main-footer">
   <div class="container">
-    <h1 class="text-center">Footer</h1>
+    <div class="folow-me">
+      Follow Me On
+    </div>
+    <ul class="list-inline social-links text-center">
+      <li>
+        <a href="https://www.facebook.com/nhithai1905"  data-toggle="tooltip"  data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/nhi-thai-b69b7535/"  data-toggle="tooltip"  data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="https://github.com/nhidev"  data-toggle="tooltip"  data-placement="top" title="Github"><i class="fa fa-github"></i></a>
+      </li>
+    </ul>
+    <p class="text-center no-margin">
+      NhiThai - All Rights Reserved &COPY; 2017
+    </p>
+    <a href="#home" class="back-to-top"><i class="fa fa-angle-double-up" ></i></a>
   </div>
 </footer>
-
     <script src="/js/vendor.js"></script>
     <script src="/js/main.js"></script>
   </body>
