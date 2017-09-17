@@ -1,0 +1,39 @@
+.box-btn-more {
+  position: relative;
+  padding: 20px 0;
+  text-align:center;
+  .btn {
+    position: relative;
+    background: $white;
+    text-decoration: none;
+    border-left: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $gray-lighter;
+    }
+  }
+  &::before {
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-top: 1px solid $gray-lighter;
+    left: 0;
+  }
+}
+
+.btn-link {
+  @include transition(all 0.8s ease 0s);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  min-width: 151px;
+  border-width: 3px;
+  letter-spacing: 1px;
+  padding: 13px;
+  background-color: transparent;
+  color: $black;
+}

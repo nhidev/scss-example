@@ -3,10 +3,87 @@
 @import 'lib/variables';
 @import 'lib/mixins';
 
-@import 'shared/helper';
-@import 'shared/main-header';
-@import 'shared/main-footer';
-@import 'shared/masonry';
-@import 'blocks/about';
+@import 'shared/layout/main-header';
+@import 'shared/layout/main-footer';
+@import 'shared/module/helper';
+@import 'shared/module/buttons';
+@import 'shared/module/masonry';
 
+body {
+  background: $white;
+  color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  line-height: $line-height-base;
+  position: relative;
 
+  .wrapper {
+    @include opacity(0);
+    position: relative;
+    visibility: hidden;
+    z-index: 2;
+
+  }
+}
+
+.my-profile {
+  position: relative;
+
+  .my-pict {
+    background-image: url('../images/my-pict.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @media (max-width: $res-mobile) {
+      height: 300px;
+      position: relative;
+    }
+
+    .overfly {
+      @include transition(all .8s ease 0s);
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .text-botttom {
+        @include transition(all .8s ease 0s);
+        bottom: 0;
+        padding: 40px;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        width: 100%;
+      }
+    }
+  }
+
+  .my-desc,
+  .my-pict {
+    width: 50%;
+
+    @media(max-width: $res-mobile) {
+      width: 100%;
+    }
+  }
+
+  .my-desc {
+    float: right;
+
+    .inner-text {
+      max-width: 585px;
+      padding: 40px;
+
+      @media (max-width: $res-mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+}
